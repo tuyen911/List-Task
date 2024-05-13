@@ -1,0 +1,170 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container-list {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.countdown-container {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.countdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.countdown__timer {
+  font-size: 24px;
+}
+
+.countdown__text {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.countdown__text span {
+  font-size: 14px;
+  color: #333333a1;
+}
+
+.countdown__text p {
+  color: #273d30;
+  letter-spacing: 3px;
+}
+
+.header-row {
+  display: flex;
+  width: 100%;
+}
+
+.header-left {
+  width: 70%;
+}
+
+.header-right {
+  width: 30%;
+}
+
+.question-title,
+.correct-answer-title {
+  font-size: 18px;
+}
+
+.answer-options {
+  display: flex;
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.quiz-flex {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+
+.even-question {
+  background-color: #f2f2f2;
+}
+
+.odd-question {
+  background-color: #e6e6e6;
+}
+
+.question-column {
+  width: 70%;
+}
+
+.answers-column {
+  width: 30%;
+}
+
+.style-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.style-list li {
+  margin-bottom: 10px;
+}
+
+.beautiful-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 0;
+  padding: 14px 28px;
+  background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: button-shimmer 2s infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.beautiful-button:hover {
+  background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+  animation: button-particles 1s ease-in-out infinite;
+  transform: translateY(-2px);
+}
+
+.beautiful-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes button-shimmer {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+@keyframes button-particles {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}

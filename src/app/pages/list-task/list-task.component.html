@@ -1,0 +1,58 @@
+<h2>Danh sách câu hỏi</h2>
+<div class="container-list">
+  <div class="countdown-container">
+    <div class="countdown-header">
+      <div class="countdown__timer">
+        <i class="fa-regular fa-clock"></i>
+        <div class="countdown__text">
+          <span>Thời gian còn lại:</span>
+          <p>{{ minutes }} phút {{ seconds }} giây</p>
+        </div>
+      </div>      
+    </div>   
+  </div>
+  <div class="quiz-question" *ngFor="let question of questions; let i = index">
+    <ng-container *ngIf="i === 0">
+        <h5>Câu hỏi {{ i + 1 }} trong tổng số {{ questions.length }}</h5>
+        <div class="header-row">
+            <div class="header-left">
+                <h2 class="question-title">Tích vào ô bên phải bạn cho là đúng, không đúng không tích</h2>
+            </div>
+            <div class="header-right">
+                <h2 class="correct-answer-title">Đúng</h2>
+                <div class="answer-options">
+                    <div class="option">A</div>
+                    <div class="option">B</div>
+                    <div class="option">C</div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div class="quiz-flex" [ngClass]="{'even-question': i % 2 === 0, 'odd-question': i % 2 !== 0}">
+        <div class="question-column">
+            <div class="question-wrapper">
+                <div>{{ question.content }}</div>
+            </div>
+        </div>
+        <div class="answers-column">
+            <div class="answers-wrapper">
+                <div>
+                    <ul class="style-list">
+                        <li *ngFor="let answer of question.answers">
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    [name]="question.id" 
+                                    [value]="answer.id" 
+                                    [disabled]="answer.id !== question.correctAnswer" 
+                                    (change)="selectAnswer(question, answer)">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button (click)="submitAnswers()" class="beautiful-button">Submit</button>  
+</div>
