@@ -8,7 +8,7 @@
     padding: 20px; 
     box-sizing: border-box; 
     max-width: 40%; 
-    margin: 0 auto;
+    margin: 60px auto;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
 }
@@ -71,4 +71,9 @@
     100% {
       background-position: right bottom;
     }
+}
+@media screen and (max-width: 800px) {
+  .success-container{
+    max-width:70%;
+  }
 }
