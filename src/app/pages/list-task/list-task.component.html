@@ -1,19 +1,8 @@
-<h2>Danh sách câu hỏi</h2>
+
 <div class="container-list">
-  <div class="countdown-container">
-    <div class="countdown-header">
-      <div class="countdown__timer">
-        <i class="fa-regular fa-clock"></i>
-        <div class="countdown__text">
-          <span>Thời gian còn lại:</span>
-          <p>{{ minutes }} phút {{ seconds }} giây</p>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="quiz-question" *ngFor="let question of questions; let i = index">
     <ng-container *ngIf="i === 0">
-      <h5>Câu hỏi {{ i + 1 }} trong tổng số {{ questions.length }}</h5>
+      
       <div class="header-row">
         <div class="header-left">
           <h2 class="question-title">Tích vào ô bên phải bạn cho là đúng, không đúng không tích</h2>
@@ -47,7 +36,7 @@
                       [name]="question.id" 
                       [value]="answer.id" 
                       (change)="selectAnswer(question, answer)">
-                    {{ answer.content }}
+                    <!-- {{ answer.content }} -->
                   </label>
                 </li>
               </ng-container>
