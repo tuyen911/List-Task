@@ -13,8 +13,9 @@ body {
 
 h2 {
   font-size: 24px;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
+  margin-left: 10px;
 }
 
 .container-list {
@@ -60,19 +61,17 @@ h2 {
 }
 
 .header-row {
-  display: flex;
   width: 100%;
+  margin-left: 10px;
 }
 
-.header-left {
-  width: 70%;
+.question-title {
+  font-size: 24px;
+  text-align: left;
+  margin: 0.5em 0;
+  margin-left: 10px;
 }
 
-.header-right {
-  width: 30%;
-}
-
-.question-title,
 .correct-answer-title {
   font-size: 18px;
 }
@@ -92,11 +91,9 @@ h2 {
   background: aliceblue;
   display: flex;
   align-items: flex-start;
-  /* border: 1px solid #ccc; */
   border-radius: 10px;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
+  margin: 10px;
+  justify-content: center;
 }
 
 .question-column {
@@ -105,6 +102,17 @@ h2 {
 
 .answers-column {
   width: 30%;
+}
+
+.question-content {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.question-number {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .style-list {
@@ -122,10 +130,7 @@ h2 {
 .hidden-answer {
   visibility: hidden;
 }
-/* .correct-answer {
-  visibility: visible;
-} */
-  
+
 .beautiful-button {
   display: block;
   width: 100%;
@@ -170,5 +175,78 @@ h2 {
   }
   100% {
     background-position: right bottom;
+  }
+}
+
+/* Responsivity */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+  .question-title {
+    font-size: 24px;
+  }
+  .correct-answer-title {
+    font-size: 18px;
+  }
+  .beautiful-button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  h2 {
+    font-size: 24px;
+  }
+  .question-title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .question-title {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .question-title {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 344px) and (max-width: 882px) {
+  .question-title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 853px) and (max-width: 1280px) {
+  .question-title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 914px) {
+  .header-left {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .header-left {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+  .header-left {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+  .header-left {
+    width: 100%;
   }
 }

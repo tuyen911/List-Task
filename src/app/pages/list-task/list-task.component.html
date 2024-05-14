@@ -1,47 +1,35 @@
-
 <div class="container-list">
   <div class="quiz-question" *ngFor="let question of questions; let i = index">
     <ng-container *ngIf="i === 0">
-      
       <div class="header-row">
-        <div class="header-left">
-          <h2 class="question-title">Tích vào ô bên phải bạn cho là đúng, không đúng không tích</h2>
-        </div>
-        <div class="header-right">
-          <!-- <h2 class="correct-answer-title">Đúng</h2>
-          <div class="answer-options">
-            <div class="option">A</div>
-            <div class="option">B</div>
-            <div class="option">C</div>
-          </div> -->
-        </div>
+        <h2 class="question-title">Tích vào ô bên phải bạn cho là đúng, không đúng không tích</h2>
       </div>
     </ng-container>
     <div class="quiz-flex">
       <div class="question-column">
         <div class="question-wrapper">
-          <div style="margin-left:14px;">{{ question.content }}</div>
+          <div class="question-content">
+            <span class="question-number">{{ i + 1 }}.</span>
+            <span>{{ question.content }}</span>
+          </div>
         </div>
       </div>
       <div class="answers-column">
         <div class="answers-wrapper">
-          <div>
-            <ul class="style-list">
-              <ng-container *ngFor="let answer of question.answers">
-                <li [class.correct-answer]="answer.id === question.correctAnswer"
-                    [class.hidden-answer]="answer.id !== question.correctAnswer">
-                  <label>
-                    <input 
-                      type="radio" 
-                      [name]="question.id" 
-                      [value]="answer.id" 
-                      (change)="selectAnswer(question, answer)">
-                    <!-- {{ answer.content }} -->
-                  </label>
-                </li>
-              </ng-container>
-            </ul>
-          </div>
+          <ul class="style-list">
+            <ng-container *ngFor="let answer of question.answers">
+              <li [class.correct-answer]="answer.id === question.correctAnswer"
+                  [class.hidden-answer]="answer.id !== question.correctAnswer">
+                <label>
+                  <input 
+                    type="radio" 
+                    [name]="question.id" 
+                    [value]="answer.id" 
+                    (change)="selectAnswer(question, answer)">
+                </label>
+              </li>
+            </ng-container>
+          </ul>
         </div>
       </div>
     </div>

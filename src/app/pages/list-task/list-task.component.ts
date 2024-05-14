@@ -570,12 +570,12 @@ export class ListTaskComponent implements OnInit, OnDestroy{
   }
 
   submitAnswers(): void {
-    for (let question of this.questions) {
-      if (question.selectedAnswer === null) {
-        alert('Vui lòng chọn đáp án cho tất cả các câu hỏi!');
-        return;
-      }
-    }
+    // for (let question of this.questions) {
+    //   if (question.selectedAnswer === null) {
+    //     alert('Vui lòng chọn đáp án cho tất cả các câu hỏi!');
+    //     return;
+    //   }
+    // }
 
     // Nếu tất cả các câu hỏi đều đã được trả lời, lưu kết quả và điều hướng
     localStorage.setItem('quizResults', JSON.stringify(this.questions));
