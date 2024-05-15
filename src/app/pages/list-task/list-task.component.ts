@@ -78,7 +78,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },
     { 
       id: 7, 
@@ -90,7 +90,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },
     { 
       id: 8, 
@@ -102,7 +102,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'b'
     },
     { 
       id: 9, 
@@ -114,7 +114,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'c'
     },
     { 
       id: 10, 
@@ -138,7 +138,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },
     { 
       id: 12, 
@@ -162,7 +162,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },
     { 
       id: 14, 
@@ -174,7 +174,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     },
     { 
       id: 15, 
@@ -186,7 +186,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'b'
     },
     { 
       id: 16, 
@@ -198,7 +198,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },
     { 
       id: 17, 
@@ -210,7 +210,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'c'
     },
     { 
       id: 18, 
@@ -222,7 +222,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },
     { 
       id: 19, 
@@ -234,7 +234,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     },
     { 
       id: 20, 
@@ -246,7 +246,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },
     { 
       id: 21, 
@@ -269,7 +269,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     },
     { 
       id: 23, 
@@ -281,7 +281,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'c'
     },
     { 
       id: 24, 
@@ -293,7 +293,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'b'
     },
     { 
       id: 25, 
@@ -305,7 +305,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'a'
     },
     { 
       id: 26, 
@@ -317,7 +317,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },{ 
       id: 27, 
       content: 'Tui có xu hướng bốc đồng làm/nói những điều àm sau này tui thấy hối hận trong cuộc cãi vã hơn alf có thể suy nghĩ sâu sắc về mọi thứ.',
@@ -364,7 +364,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },{ 
       id: 31, 
       content: 'Đôi khi mọi người thấy tui nhàm chán vì tui không tạo được nhiều kịch tính trong mối quan hệ.',
@@ -375,7 +375,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'b'
     },
     { 
       id: 32, 
@@ -411,7 +411,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'c'
     },
     { 
       id: 35, 
@@ -423,7 +423,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'b'
     },
     { 
       id: 36, 
@@ -435,7 +435,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },
     { 
       id: 37, 
@@ -447,7 +447,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'a'
     },
     { 
       id: 38, 
@@ -459,7 +459,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     },
     { 
       id: 39, 
@@ -471,7 +471,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'a'
+      correctAnswer: 'c'
     },
     { 
       id: 40, 
@@ -483,7 +483,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'a'
     },
     { 
       id: 41, 
@@ -495,7 +495,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'a'
     },
     { 
       id: 42, 
@@ -507,7 +507,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     },
     { 
       id: 43, 
@@ -519,7 +519,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'b'
+      correctAnswer: 'c'
     },
     { 
       id: 44, 
@@ -531,7 +531,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
         
       ],
       selectedAnswer: null,
-      correctAnswer: 'c'
+      correctAnswer: 'b'
     }
   ];
   currentQuestionIndex = 0;
