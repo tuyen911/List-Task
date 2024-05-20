@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../../Service/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-page',
@@ -7,7 +8,7 @@ import { UsersService } from '../../Service/users.service';
   styleUrl: './users-page.component.css'
 })
 export class UsersPageComponent {
-  constructor (private  userService : UsersService) {}
+  constructor (private  userService : UsersService, private router: Router) {}
   name!: string
   email!: string
   phone!:string
@@ -16,9 +17,11 @@ export class UsersPageComponent {
   loadingTitle: string = 'Loading...'
   errors:any  = [] ;
 
+ 
   save(){
     this.isLoading=true;
     this.loadingTitle='Saving';
+    this.router.navigate(['/success-page']); 
 
     var inputDate ={
       name: this.name,
@@ -29,12 +32,10 @@ export class UsersPageComponent {
       next:(res :any)=>{
         console.log(res,'response');
 
-       
         alert(res.message);
         this.name ='';
         this.email='';
-        this.phone= '';    
-        
+        this.phone= '';            
         this.isLoading=false;
       },
       error:(err :any) =>{

@@ -90,7 +90,7 @@ h2 {
 .quiz-flex {
   background: aliceblue;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   border-radius: 10px;
   margin: 10px;
   justify-content: center;
@@ -102,6 +102,7 @@ h2 {
 
 .answers-column {
   width: 30%;
+  text-align: center;
 }
 
 .question-content {
@@ -111,8 +112,7 @@ h2 {
 }
 
 .question-number {
-  font-weight: bold;
-  margin-right: 10px;
+ 
 }
 
 .style-list {
@@ -124,7 +124,7 @@ h2 {
 }
 
 .style-list li {
-  margin-bottom: 10px;
+  text-align: center;
 }
 
 .hidden-answer {

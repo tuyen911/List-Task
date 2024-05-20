@@ -579,7 +579,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
 
     // Nếu tất cả các câu hỏi đều đã được trả lời, lưu kết quả và điều hướng
     localStorage.setItem('quizResults', JSON.stringify(this.questions));
-    this.router.navigate(['/success-page']);
+    this.router.navigate(['/users-page']);
     console.log(this.questions);
   }
 
@@ -606,22 +606,7 @@ export class ListTaskComponent implements OnInit, OnDestroy{
 
     this.minutes = remainingTime.getMinutes();
     this.seconds = remainingTime.getSeconds();
-  }
-  //nút điều hướng câu hỏi trước sau
-  // goToPreviousQuestion(): void {
-  //   if (this.currentQuestionIndex > 0) {
-  //     this.currentQuestionIndex--;
-  //     this.setCurrentQuestion();
-  //   }
-  // }
-  
-  // goToNextQuestion(): void {
-  //   if (this.currentQuestionIndex < this.questions.length - 1) {
-  //     this.currentQuestionIndex++;
-  //     this.setCurrentQuestion();
-  //   }
-  // }
-  
+  } 
 }
 
 
