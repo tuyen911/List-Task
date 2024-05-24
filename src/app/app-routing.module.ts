@@ -1,6 +1,7 @@
 
 
 
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -12,12 +13,14 @@ import { PageUserComponent } from './pages/page-user/page-user.component';
 
 
 
+
 const routes: Routes = [
   {path: '', component: HomePageComponent, title:'Home-page'},
   {path: 'about-page', component: AboutPageComponent, title:'About-page'},
   {path: 'users-page', component: UsersPageComponent, title:'Users-page'},
   {path: 'success-page', component: SuccessPageComponent, title:'Success-page'},
-  {path: 'page-user', component: PageUserComponent, title:'page-user'}
+  {path: 'page-user', component: PageUserComponent, title:'page-user'},
+ 
 ];
 
 @NgModule({

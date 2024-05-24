@@ -27,6 +27,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     PageUserComponent,
-    ListTaskComponent
+    ListTaskComponent,
   ],
   imports: [
     BrowserModule,

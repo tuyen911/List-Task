@@ -2,10 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 export interface UersResponse{
-  id : number
-  name: string
-  email: string
-  phone: string
+  id ?: number
+  name?: string
+  email?: string
+  phone?: string
 }
 
 

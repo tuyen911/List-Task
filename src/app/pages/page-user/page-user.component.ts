@@ -1,4 +1,4 @@
-import { UsersService, UersResponse } from './../../Service/users.service';
+import { UsersService, UersResponse} from './../../Service/users.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from  '@angular/router';
 @Component({
@@ -8,9 +8,12 @@ import { Router } from  '@angular/router';
 })
 export class PageUserComponent implements OnInit {
   data: any[] = []; 
-  editMode: boolean = false; // Biến để kiểm tra xem hiện tại có đang ở chế độ chỉnh sửa hay không
+  updateUsers: boolean = false;// Biến để kiểm tra xem hiện tại có đang ở chế độ chỉnh sửa hay không
   editedUserId: number | null = null; // Biến để lưu trữ ID của người dùng đang được chỉnh sửa
   editedUser: Partial<UersResponse> = {};
+  counter: number = 0; 
+
+
 
   constructor(private userService: UsersService, private router: Router) {}
 
@@ -31,6 +34,7 @@ export class PageUserComponent implements OnInit {
     this.userService.getData().subscribe((res: any) => { 
       this.data = res.data; 
       console.log(res); 
+      this.updateCounter();
     });
   }
 
@@ -38,30 +42,47 @@ export class PageUserComponent implements OnInit {
     if (confirm("Are you sure you want to delete this user?")) {
       this.userService.deleteUser(id).subscribe(() => {
         this.data = this.data.filter(user => user.id !== id);
+        this.updateCounter();
       });
     }
   }
 
   editUser(user: UersResponse): void {
-    this.editMode = true;
     this.editedUser = { ...user };
-    
+    this.updateUsers = true;
   }
 
   updateUser(): void {
-    if (this.editedUser.id) {
-      this.userService.updateUser(this.editedUser.id, this.editedUser).subscribe(() => {
-        const index = this.data.findIndex(user => user.id === this.editedUser.id);
-        if (index !== -1) {
-          this.data[index] = { ...this.data[index], ...this.editedUser };
+    if (typeof this.editedUser.id === 'number') {
+      this.userService.updateUser(this.editedUser.id, this.editedUser).subscribe({
+        next: (res: any) => {
+          console.log(res, 'response');
+          alert(res.message);
+          this.updateUsers = false;
+          this.getData(); // Load lại dữ liệu sau khi cập nhật thành công
+        },
+        error: (err: any) => {
+          console.log(err.error.errors, "error");
+          alert('Cập nhật thông tin người dùng không thành công.');
         }
-        this.cancelEdit();
       });
+    } else {
+      console.error('ID của người dùng không hợp lệ.');
     }
   }
 
   cancelEdit(): void {
-    this.editMode = false;
+    this.updateUsers = false;
     this.editedUser = {};
   }
+  updateCounter() {
+    this.counter = 0;
+    this.data.forEach((item, index) => {
+      item.serialNumber = ++this.counter;
+    });
+  }
+
+  
 }
+
+  
